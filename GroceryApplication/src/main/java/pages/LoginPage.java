@@ -37,10 +37,10 @@ public class LoginPage {
 
 		}
 		
-		public void clickCheckboxButton() {
+		public void clickOnCheckbox() {
 			checkbox.click();
 		}
-		 public void enterLoginButtononButtonfield()
+		 public void clickOnLoginButton()
 		 {
 				signin.click();
 

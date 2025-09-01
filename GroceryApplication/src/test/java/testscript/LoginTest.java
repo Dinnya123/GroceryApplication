@@ -19,8 +19,8 @@ public class LoginTest extends BaseClass {
 		LoginPage login=new LoginPage(driver);
 		login.enterUsernameOnUserNameField(userName);
 		login.enterPasswordOnPasswordField(password);
-		login.clickCheckboxButton();
-		login.enterLoginButtononButtonfield();
+		login.clickOnCheckbox();
+		login.clickOnLoginButton();
 		
 	}
 	@Test
@@ -32,8 +32,8 @@ public void verifyUserLoginWithValidUsernameandInvalidPassword() throws IOExcept
 		LoginPage login=new LoginPage(driver);
 		login.enterUsernameOnUserNameField(userName);
 		login.enterPasswordOnPasswordField(password);
-		login.clickCheckboxButton();
-		login.enterLoginButtononButtonfield();
+		login.clickOnCheckbox();
+		login.clickOnLoginButton();
 		
 	}
 	@Test
@@ -45,8 +45,8 @@ public void verifyUserLoginWithInvalidUsernameandValidPassword() throws IOExcept
 		LoginPage login=new LoginPage(driver);
 		login.enterUsernameOnUserNameField(userName);
 		login.enterPasswordOnPasswordField(password);
-		login.clickCheckboxButton();
-		login.enterLoginButtononButtonfield();
+		login.clickOnCheckbox();
+		login.clickOnLoginButton();
 }
 	@Test
 public void verifyUserLoginWithInvalidCredentials() throws IOException {
@@ -57,8 +57,8 @@ public void verifyUserLoginWithInvalidCredentials() throws IOException {
 		LoginPage login=new LoginPage(driver);
 		login.enterUsernameOnUserNameField(userName);
 		login.enterPasswordOnPasswordField(password);
-		login.clickCheckboxButton();
-		login.enterLoginButtononButtonfield();
+		login.clickOnCheckbox();
+		login.clickOnLoginButton();
 }
 	
 	

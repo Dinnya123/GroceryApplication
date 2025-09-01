@@ -21,8 +21,8 @@ public class AdminTest extends BaseClass {
 		LoginPage login=new LoginPage(driver);
 		login.enterUsernameOnUserNameField(userName);
 		login.enterPasswordOnPasswordField(password);
-		login.clickCheckboxButton();
-		login.enterLoginButtononButtonfield();
+		login.clickOnCheckbox();
+		login.clickOnLoginButton();
 
 
 		
@@ -46,8 +46,8 @@ public class AdminTest extends BaseClass {
 		LoginPage login=new LoginPage(driver);
 		login.enterUsernameOnUserNameField(userName);
 		login.enterPasswordOnPasswordField(password);
-		login.clickCheckboxButton();
-		login.enterLoginButtononButtonfield();
+		login.clickOnCheckbox();
+		login.clickOnLoginButton();
 
 
 		AdminPage admin=new AdminPage(driver);

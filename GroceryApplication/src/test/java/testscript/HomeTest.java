@@ -23,8 +23,8 @@ import pages.LoginPage;
 			LoginPage login=new LoginPage(driver);
 			login.enterUsernameOnUserNameField(userName);
 			login.enterPasswordOnPasswordField(password);
-			login.clickCheckboxButton();
-			login.enterLoginButtononButtonfield();
+			login.clickOnCheckbox();
+			login.clickOnLoginButton();
 	
 			
 			HomePage home=new HomePage(driver);
