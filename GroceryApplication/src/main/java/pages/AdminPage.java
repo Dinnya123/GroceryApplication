@@ -41,12 +41,12 @@ public WebDriver driver;
 		newbutton.click();
 	}
 	
-	public void enterUsername() {
-		username.sendKeys("Dinnya");
+	public void enterUsername(String username1) {
+		username.sendKeys(username1);
 	}
 	
-	public void enterPassword() {
-		password.sendKeys("malavika");
+	public void enterPassword(String password1) {
+		password.sendKeys(password1);
 	}
 	
 	public void selectUsertype() {
@@ -61,9 +61,9 @@ public WebDriver driver;
 	public void clickSearchIcon() {
 		searchicon.click();
 	}
-	public void enterUsernamefield()
+	public void enterUsernamefield(String username2)
 {
-		usernamefield.sendKeys("Dinnya");
+		usernamefield.sendKeys(username2);
 		}
 	public void selectUsertypefield() {
 		Select select=new Select(usertypefield);

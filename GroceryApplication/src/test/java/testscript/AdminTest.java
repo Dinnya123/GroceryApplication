@@ -30,9 +30,12 @@ public class AdminTest extends BaseClass {
 
         admin.clickMoreInfoLink();
         admin.clickNewButton();
+        String userName1=ExcelUtility.readStringData(1, 0,"AdminPage");
+		String password1=ExcelUtility.readStringData(1, 1, "AdminPage");
+
         
-        admin.enterUsername();
-        admin.enterPassword();
+        admin.enterUsername(userName1);
+        admin.enterPassword(password1);
         admin.selectUsertype();
         admin.clickSaveButton();
         
@@ -55,7 +58,10 @@ public class AdminTest extends BaseClass {
 		admin.clickMoreInfoLink();
 
 		admin.clickSearchIcon();
-        admin.enterUsernamefield();
+        String userName2=ExcelUtility.readStringData(2,0,"AdminPage");
+
+		
+       admin.enterUsernamefield(userName2);
         admin.selectUsertypefield();
         admin.clickSearch();
 	}
