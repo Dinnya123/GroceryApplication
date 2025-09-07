@@ -42,6 +42,7 @@ public WebDriver driver;
 	}
 	
 	public void enterUsername(String username1) {
+		
 		username.sendKeys(username1);
 	}
 	

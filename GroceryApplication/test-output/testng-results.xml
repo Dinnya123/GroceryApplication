@@ -2,24 +2,31 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-02T14:11:54 IST" name="Default suite" finished-at="2025-09-02T14:11:59 IST" duration-ms="5012">
+  <suite started-at="2025-09-07T08:13:33 IST" name="Default suite" finished-at="2025-09-07T08:13:37 IST" duration-ms="4133">
     <groups>
     </groups>
-    <test started-at="2025-09-02T14:11:54 IST" name="Default test" finished-at="2025-09-02T14:11:59 IST" duration-ms="5012">
-      <class name="testscript.AdminTest">
-        <test-method is-config="true" signature="initializeBrowser()[pri:0, instance:testscript.AdminTest@799f10e1]" started-at="2025-09-02T14:11:54 IST" name="initializeBrowser" finished-at="2025-09-02T14:11:57 IST" duration-ms="2533" status="PASS">
+    <test started-at="2025-09-07T08:13:33 IST" name="Default test" finished-at="2025-09-07T08:13:37 IST" duration-ms="4133">
+      <class name="testscript.ManageNewsTest">
+        <test-method is-config="true" signature="initializeBrowser()[pri:0, instance:testscript.ManageNewsTest@5c6648b0]" started-at="2025-09-07T08:13:33 IST" name="initializeBrowser" finished-at="2025-09-07T08:13:35 IST" duration-ms="2125" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyUserisabletoSearchNewUser()[pri:0, instance:testscript.AdminTest@799f10e1]" started-at="2025-09-02T14:11:57 IST" name="verifyUserisabletoSearchNewUser" finished-at="2025-09-02T14:11:59 IST" duration-ms="2429" status="PASS">
+        <test-method signature="verifyUserisabletoSearchNewlyAddedNews()[pri:0, instance:testscript.ManageNewsTest@5c6648b0]" started-at="2025-09-07T08:13:35 IST" name="verifyUserisabletoSearchNewlyAddedNews" finished-at="2025-09-07T08:13:37 IST" duration-ms="1788" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserisabletoSearchNewUser -->
-        <test-method is-config="true" signature="closeAndQuit()[pri:0, instance:testscript.AdminTest@799f10e1]" started-at="2025-09-02T14:11:59 IST" name="closeAndQuit" finished-at="2025-09-02T14:11:59 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- verifyUserisabletoSearchNewlyAddedNews -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.ManageNewsTest@5c6648b0]" started-at="2025-09-07T08:13:37 IST" name="driverQuit" finished-at="2025-09-07T08:13:37 IST" duration-ms="175" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUserisabletoSearchNewlyAddedNews status=SUCCESS method=ManageNewsTest.verifyUserisabletoSearchNewlyAddedNews()[pri:0, instance:testscript.ManageNewsTest@5c6648b0] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closeAndQuit -->
-      </class> <!-- testscript.AdminTest -->
+        </test-method> <!-- driverQuit -->
+      </class> <!-- testscript.ManageNewsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

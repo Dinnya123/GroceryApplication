@@ -8,6 +8,7 @@ import automationCore.BaseClass;
 import pages.AdminPage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
+import utilities.RandomDataUtility;
 
 public class AdminTest extends BaseClass {
 	
@@ -36,6 +37,9 @@ public class AdminTest extends BaseClass {
         
         admin.enterUsername(userName1);
         admin.enterPassword(password1);
+       // RandomDataUtility random=new RandomDataUtility();
+        //String userName1=random.createRando
+        
         admin.selectUsertype();
         admin.clickSaveButton();
         
