@@ -31,15 +31,18 @@ public class AdminTest extends BaseClass {
 
         admin.clickMoreInfoLink();
         admin.clickNewButton();
-        String userName1=ExcelUtility.readStringData(1, 0,"AdminPage");
-		String password1=ExcelUtility.readStringData(1, 1, "AdminPage");
+       // String userName1=ExcelUtility.readStringData(1, 0,"AdminPage");
+		//String password1=ExcelUtility.readStringData(1, 1, "AdminPage");
 
+        
+        //admin.enterUsername(userName1);
+       // admin.enterPassword(password1);
+       RandomDataUtility random=new RandomDataUtility();
+        String userName1=random.createRandomUserName();
+        String password1=random.createRandomPassword();
         
         admin.enterUsername(userName1);
         admin.enterPassword(password1);
-       // RandomDataUtility random=new RandomDataUtility();
-        //String userName1=random.createRando
-        
         admin.selectUsertype();
         admin.clickSaveButton();
         
