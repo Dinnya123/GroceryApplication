@@ -20,6 +20,8 @@ public class HomePage  {
 	
 	@FindBy(xpath = "//a[@data-toggle='dropdown']") private WebElement admin;
 	@FindBy(xpath = "//a[@class='dropdown-item'and @href=\'https://groceryapp.uniqassosiates.com/admin/logout\']")private WebElement logout;
+	@FindBy(xpath = "//p[text()='Sign in to start your session']")private WebElement signintitle;
+
 	
 	
 
@@ -35,5 +37,7 @@ public class HomePage  {
 	public void clickOnLogOutIcon() {
 		logout.click();
 	}
-
+	 public String getSignInTitle() {
+    	 return signintitle.getText();
+	 }
 }

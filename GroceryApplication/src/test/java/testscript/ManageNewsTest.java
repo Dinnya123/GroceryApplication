@@ -2,9 +2,11 @@ package testscript;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automationCore.BaseClass;
+import constants.Constant;
 import pages.LoginPage;
 import pages.ManageNewsPage;
 import utilities.ExcelUtility;
@@ -33,8 +35,12 @@ public class ManageNewsTest extends BaseClass {
 
 		news.enterTheNews(textfield);
 		news.clickOnSaveButton();
+		
+		
+         boolean alertboxDisplay =news.isAlertBoxDisplayed();
+ 		Assert.assertTrue(alertboxDisplay,Constant.ADDNEWNEWSERROR);
 
-
+		
 }
 		@Test
 public void verifyUserisabletoSearchNewlyAddedNews() throws IOException {
@@ -56,6 +62,10 @@ public void verifyUserisabletoSearchNewlyAddedNews() throws IOException {
 
 		news.enterTheNewsTitle(textfield1);
 		news.clickOnSearchButton1();
+		
+		String expected="oopppphhh";
+		String actual=news.getText();
+		Assert.assertEquals(actual, expected,Constant.SEARCHNEWNEWSERROR);
 		
 }
 		@Test

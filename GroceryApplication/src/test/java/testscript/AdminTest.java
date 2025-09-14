@@ -2,9 +2,11 @@ package testscript;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automationCore.BaseClass;
+import constants.Constant;
 import pages.AdminPage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
@@ -46,7 +48,12 @@ public class AdminTest extends BaseClass {
         admin.selectUsertype();
         admin.clickSaveButton();
         
+        boolean alertDisplay=admin.isAlertBoxDisplayed();
+		Assert.assertTrue(alertDisplay,Constant.ADDNEWUSERERROR);
+		
 	}
+        
+	
 	@Test
 	public void verifyUserisabletoSearchNewUser() throws IOException {
 		
@@ -71,6 +78,10 @@ public class AdminTest extends BaseClass {
        admin.enterUsernamefield(userName2);
         admin.selectUsertypefield();
         admin.clickSearch();
+        String expected="Password";
+		String actual=admin.getPasswordTitleText();
+		Assert.assertEquals(actual, expected,Constant.SEARCHNEWUSERERROR);
+
 	}
 }
 

@@ -30,6 +30,11 @@ public WebDriver driver;
 	@FindBy(xpath = "//button[text()='Update']")private WebElement updatebutton;
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/news/delete?del=7818&page_ad=1']")private WebElement deleteicon;
 	
+	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']") private WebElement alertbox;
+	@FindBy(xpath = "//td[text()='oopppphhh']") private WebElement text;
+	
+	
+	
 	public void clickMoreinfoLink() {
 		moreInfo.click();
 	}
@@ -73,5 +78,15 @@ public WebDriver driver;
 	public void clickOnDeleteIcon() {
 		deleteicon.click();
 	}
+	
+	/* public String getTitleText() {
+    	 return enternewstitle.getText();
+	 }*/
+	public boolean isAlertBoxDisplayed() {
+		 return alertbox.isDisplayed();
 
+}
+	 public String getText() {
+    	 return text.getText();
+}
 }

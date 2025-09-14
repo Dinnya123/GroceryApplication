@@ -30,6 +30,9 @@ public WebDriver driver;
     @FindBy(id = "un") private WebElement  usernamefield;
     @FindBy(id="ut")private WebElement usertypefield;
     @FindBy(name="Search")private WebElement search;
+    
+    @FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']") private WebElement alertbox;
+    @FindBy(xpath = "//th[text()='Password']") private WebElement passwordtitle;
 		
 	public void clickMoreInfoLink() {
 		moreinfolink.click();
@@ -73,4 +76,11 @@ public WebDriver driver;
 	public void clickSearch() {
 		search.click();
 	}
+	
+	 public boolean isAlertBoxDisplayed() {
+		 return alertbox.isDisplayed();
+	 }
+	 public String getPasswordTitleText() {
+    	 return passwordtitle.getText();
+     }
 }

@@ -22,7 +22,13 @@ public class LoginPage {
 		@FindBy(name = "password")private WebElement passwordfield;
 		@FindBy(xpath = "//label[@for='remember']") private WebElement checkbox;
 		@FindBy(xpath ="//button[text()='Sign In']") private WebElement signin;
-		
+		@FindBy(xpath = "//p[text()='Dashboard']")private WebElement dashboard;
+		@FindBy(xpath = "//b[text()='7rmart supermarket']") private WebElement logintitle;
+		@FindBy(xpath = "//p[text()='Admin Users']") private WebElement admin;
+		//@FindBy(xpath = "//button[text()='Sign In']") private WebElement signinbutton;
+		@FindBy(xpath = "//p[text()='Sign in to start your session']")private WebElement signintitle;
+		@FindBy(xpath = "//p[text()='Sign in to start your session']")private WebElement signintitle1;
+
 		
 		
 		public void enterUsernameOnUserNameField(String userName) {
@@ -45,5 +51,18 @@ public class LoginPage {
 				signin.click();
 
 		 }
-
+		 public boolean isDashboardDisplayed() {
+			 return dashboard.isDisplayed();
+		 }
+         public String getTitleText() {
+        	 return logintitle.getText();
+         }
+         public String getSignInTitle1() {
+        	 return signintitle1.getText();
+         
+         }
+         public String getSignInTitle() {
+        	 return signintitle.getText();
+         }
+         
 }

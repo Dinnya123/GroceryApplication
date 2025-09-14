@@ -3,9 +3,11 @@
 
 	import java.io.IOException;
 
-	import org.testng.annotations.Test;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 	import automationCore.BaseClass;
+import constants.Constant;
 import pages.HomePage;
 import pages.LoginPage;
 	import utilities.ExcelUtility;
@@ -33,5 +35,8 @@ import pages.LoginPage;
 			
 			home.clickOnAdminIcon();
 			home.clickOnLogOutIcon();
+			String expected="Sign in to start your session";
+			String actual=login.getSignInTitle();
+			Assert.assertEquals(actual, expected,Constant.LOGOUTERROR);
 		}
 }
