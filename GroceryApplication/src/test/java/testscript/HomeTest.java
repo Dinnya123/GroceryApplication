@@ -13,6 +13,7 @@ import pages.LoginPage;
 	import utilities.ExcelUtility;
 
 	public class HomeTest extends BaseClass {
+		HomePage homepage;
 		
 		
 		@Test
@@ -23,18 +24,15 @@ import pages.LoginPage;
 			String password=ExcelUtility.readStringData(1, 1, "LoginPage");
 
 			LoginPage login=new LoginPage(driver);
-			login.enterUsernameOnUserNameField(userName);
-			login.enterPasswordOnPasswordField(password);
-			login.clickOnCheckbox();
-			login.clickOnLoginButton();
+			login.enterUsernameOnUserNameField(userName).enterPasswordOnPasswordField(password).clickOnCheckbox();
+			homepage=login.clickOnLoginButton();
 	
 			
-			HomePage home=new HomePage(driver);
+			//HomePage home=new HomePage(driver);
 
 		
 			
-			home.clickOnAdminIcon();
-			home.clickOnLogOutIcon();
+			homepage.clickOnAdminIcon().clickOnLogOutIcon();
 			String expected="Sign in to start your session";
 			String actual=login.getSignInTitle();
 			Assert.assertEquals(actual, expected,Constant.LOGOUTERROR);

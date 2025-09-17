@@ -16,7 +16,8 @@ public class Constant {
  
  public static final String EXCELPATH=System.getProperty("user.dir")+"\\src\\test\\resources\\TestData.xlsx";
  public static final String CONFIGFILE=System.getProperty("user.dir")+"\\src\\main\\resources\\Config.properties";
- 
+ public static final String USERTYPEVALUE="Staff";
+
 		 
 		 
 		 

@@ -8,11 +8,14 @@ import org.testng.annotations.Test;
 import automationCore.BaseClass;
 import constants.Constant;
 import pages.AdminPage;
+import pages.HomePage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
 import utilities.RandomDataUtility;
 
 public class AdminTest extends BaseClass {
+	HomePage homepage;
+	AdminPage adminpage;
 	
 	@Test
 	public void verifyUserisabletoAddNewUser() throws IOException {
@@ -22,17 +25,15 @@ public class AdminTest extends BaseClass {
 		String password=ExcelUtility.readStringData(1, 1, "LoginPage");
 
 		LoginPage login=new LoginPage(driver);
-		login.enterUsernameOnUserNameField(userName);
-		login.enterPasswordOnPasswordField(password);
+		login.enterUsernameOnUserNameField(userName).enterPasswordOnPasswordField(password);
 		login.clickOnCheckbox();
-		login.clickOnLoginButton();
+		homepage=login.clickOnLoginButton();
 
 
 		
-      AdminPage admin=new AdminPage(driver);
 
-        admin.clickMoreInfoLink();
-        admin.clickNewButton();
+		adminpage=homepage.clickMoreInfoLink();
+        adminpage.clickNewButton();
        // String userName1=ExcelUtility.readStringData(1, 0,"AdminPage");
 		//String password1=ExcelUtility.readStringData(1, 1, "AdminPage");
 
@@ -43,12 +44,12 @@ public class AdminTest extends BaseClass {
         String userName1=random.createRandomUserName();
         String password1=random.createRandomPassword();
         
-        admin.enterUsername(userName1);
-        admin.enterPassword(password1);
-        admin.selectUsertype();
-        admin.clickSaveButton();
+        adminpage.enterUsername(userName1);
+        adminpage.enterPassword(password1);
+        adminpage.selectUsertype();
+        adminpage.clickSaveButton();
         
-        boolean alertDisplay=admin.isAlertBoxDisplayed();
+        boolean alertDisplay=adminpage.isAlertBoxDisplayed();
 		Assert.assertTrue(alertDisplay,Constant.ADDNEWUSERERROR);
 		
 	}
@@ -61,28 +62,27 @@ public class AdminTest extends BaseClass {
 		String password=ExcelUtility.readStringData(1, 1, "LoginPage");
 
 		LoginPage login=new LoginPage(driver);
-		login.enterUsernameOnUserNameField(userName);
-		login.enterPasswordOnPasswordField(password);
+		login.enterUsernameOnUserNameField(userName).enterPasswordOnPasswordField(password);
 		login.clickOnCheckbox();
 		login.clickOnLoginButton();
 
 
-		AdminPage admin=new AdminPage(driver);
         
-		admin.clickMoreInfoLink();
-
-		admin.clickSearchIcon();
+		adminpage=homepage.clickMoreInfoLink();
+       adminpage.clickSearchIcon();
+       
         String userName2=ExcelUtility.readStringData(2,0,"AdminPage");
 
 		
-       admin.enterUsernamefield(userName2);
-        admin.selectUsertypefield();
-        admin.clickSearch();
+       adminpage.enterUsernamefield(userName2);
+        adminpage.selectUsertypefield();
+        adminpage.clickSearch();
         String expected="Password";
-		String actual=admin.getPasswordTitleText();
+		String actual=adminpage.getPasswordTitleText();
 		Assert.assertEquals(actual, expected,Constant.SEARCHNEWUSERERROR);
 
 	}
+	
 }
 
 

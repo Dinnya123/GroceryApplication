@@ -15,7 +15,6 @@ public WebDriver driver;
 	PageFactory.initElements(driver,this);
 	}
 
-	@FindBy(xpath = "//a[@class='small-box-footer' and @href='https://groceryapp.uniqassosiates.com/admin/list-news']") private WebElement moreInfo;
 	@FindBy(xpath = "//a[@class='btn btn-rounded btn-danger']") private WebElement newbutton;
 	@FindBy(xpath = "//textarea[@id='news']") private WebElement newstextfield;
 	@FindBy(xpath = "//button[@name='create']") private WebElement savebutton;
@@ -35,48 +34,57 @@ public WebDriver driver;
 	
 	
 	
-	public void clickMoreinfoLink() {
-		moreInfo.click();
-	}
 	
-	public void clickNewButton() {
+	
+	public ManageNewsPage clickNewButton() {
 		newbutton.click();
+		return this;
 	}
 	
-	public void enterTheNews(String textfield) {
+	public ManageNewsPage enterTheNews(String textfield) {
 		newstextfield.sendKeys(textfield);
+		return this;
 	
 	}
-	 public void clickOnSaveButton() {
+	 public ManageNewsPage clickOnSaveButton() {
 		 savebutton.click();
+		 return this;
 	 }
 	 
-	 public void clickOnSearchButton() {
+	 public ManageNewsPage clickOnSearchButton() {
 		 searchbutton.click();
+		 return this;
 		 
 	 }
-	 public void enterTheNewsTitle(String textfield1) {
+	 public ManageNewsPage enterTheNewsTitle(String textfield1) {
 		 newstitle.sendKeys(textfield1);
+		 return this;
 	 }
-	 public void clickOnSearchButton1() {
+	 public ManageNewsPage clickOnSearchButton1() {
 		 searchbutton1.click();
+		 return this;
 	 }
-	 public void clickOnResetButton() {
+	 public ManageNewsPage clickOnResetButton() {
 		 resetbutton.click();
+		 return this;
 	 }
-	 public void clickOnEditIcon() {
+	 public ManageNewsPage clickOnEditIcon() {
 		 editicon.click();
+		 return this;
 	 }
 	 
-	 public void editTheNewsTitle(String textfield2) {
+	 public ManageNewsPage editTheNewsTitle(String textfield2) {
 		 editnewstextfield.sendKeys(textfield2);
+		 return this;
 		 
 	 }
-	 public void clickOnUpdateButton() {
+	 public ManageNewsPage clickOnUpdateButton() {
 		 updatebutton.click();
+		 return this;
 	 }
-	public void clickOnDeleteIcon() {
+	public  ManageNewsPage clickOnDeleteIcon() {
 		deleteicon.click();
+		return this;
 	}
 	
 	/* public String getTitleText() {

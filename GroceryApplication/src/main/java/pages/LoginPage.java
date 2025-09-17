@@ -31,24 +31,28 @@ public class LoginPage {
 
 		
 		
-		public void enterUsernameOnUserNameField(String userName) {
+		public LoginPage enterUsernameOnUserNameField(String userName) {
 			
 			usernamefield.sendKeys(userName);
+			return this;
 
 		}
 		
 		
-		public void enterPasswordOnPasswordField(String password) {
+		public LoginPage enterPasswordOnPasswordField(String password) {
 			passwordfield.sendKeys(password);
+			return this;
 
 		}
 		
-		public void clickOnCheckbox() {
+		public LoginPage clickOnCheckbox() {
 			checkbox.click();
+			return this;
 		}
-		 public void clickOnLoginButton()
+		 public HomePage clickOnLoginButton()
 		 {
 				signin.click();
+				return new HomePage(driver);
 
 		 }
 		 public boolean isDashboardDisplayed() {

@@ -6,6 +6,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import constants.Constant;
+import utilities.PageUtility;
+import utilities.WaitUtility;
+
 public class AdminPage {
 public WebDriver driver;
 	
@@ -18,7 +22,6 @@ public WebDriver driver;
 	
 	
 	
-	@FindBy(xpath = "//a[@class='small-box-footer' and @href='https://groceryapp.uniqassosiates.com/admin/list-admin']") private WebElement moreinfolink;
 	@FindBy(xpath = "//a[@class='btn btn-rounded btn-danger']")private WebElement newbutton;
 	
 	@FindBy(id="username") private WebElement username;
@@ -34,47 +37,59 @@ public WebDriver driver;
     @FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']") private WebElement alertbox;
     @FindBy(xpath = "//th[text()='Password']") private WebElement passwordtitle;
 		
-	public void clickMoreInfoLink() {
-		moreinfolink.click();
-		
-	}
+
 	
-	public void clickNewButton()
+	public AdminPage clickNewButton()
 	{
 		newbutton.click();
+		return this;
 	}
 	
-	public void enterUsername(String username1) {
+	public AdminPage enterUsername(String username1) {
 		
 		username.sendKeys(username1);
+		return this;
 	}
 	
-	public void enterPassword(String password1) {
+	public AdminPage enterPassword(String password1) {
 		password.sendKeys(password1);
+		return this;
 	}
 	
-	public void selectUsertype() {
-		Select select=new Select(usertype);
-		select.selectByVisibleText("Staff");
+	public AdminPage selectUsertype() {
+		PageUtility page=new PageUtility();
+		page.selectDropdownWithVisibleText(usertype,Constant.USERTYPEVALUE);
+		//Select select=new Select(usertype);
+		//select.selectByVisibleText("Staff");
+		return this;
 	}
 	
-	public void clickSaveButton() {
+	public AdminPage clickSaveButton() {
+		WaitUtility wait=new WaitUtility();
+		wait.waitUntilElementToBeClickable(driver,savebutton);
 		savebutton.click();
+		return this;
 	}
 	
-	public void clickSearchIcon() {
+	public AdminPage clickSearchIcon() {
 		searchicon.click();
+		return this;
 	}
-	public void enterUsernamefield(String username2)
+	public AdminPage enterUsernamefield(String username2)
 {
 		usernamefield.sendKeys(username2);
+		return this;
 		}
-	public void selectUsertypefield() {
-		Select select=new Select(usertypefield);
-		select.selectByVisibleText("Staff");
+	public AdminPage selectUsertypefield() {
+		PageUtility page=new PageUtility();
+		page.selectDropdownWithVisibleText2(usertypefield,Constant.USERTYPEVALUE);
+		//Select select=new Select(usertypefield);
+		//select.selectByVisibleText("Staff");
+		return this;
 	}
-	public void clickSearch() {
+	public AdminPage clickSearch() {
 		search.click();
+		return this;
 	}
 	
 	 public boolean isAlertBoxDisplayed() {

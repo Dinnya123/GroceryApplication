@@ -12,15 +12,8 @@
       
       
      <class name="testscript.LoginTest">
-     <methods><include name="verifyUserLoginWithValidCredential"></include></methods>
+     <methods><include name="verifyUserLoginWithInvalidCredentials"></include></methods>
      </class>
-     
-     <!-- 
-      <class name="testscript.HomeTest"></class>
-      
-      <class name="testscript.AdminTest"></class>
-      
-      <class name="testscript.ManageNewsTest"></class> -->
      
     </classes>
   </test> <!-- Test -->
