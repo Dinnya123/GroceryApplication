@@ -24,11 +24,7 @@ public WebDriver driver;
 	@FindBy(xpath = "//button[@class='btn btn-danger btn-fix']") private WebElement searchbutton1;
 	
 	@FindBy(xpath = "//a[@class='btn btn-rounded btn-warning']") private WebElement resetbutton;
-	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/news/edit?edit=7818&page_ad=1']") private WebElement editicon;
-	@FindBy(xpath = "//textarea[@id='news']")private WebElement editnewstextfield;
-	@FindBy(xpath = "//button[text()='Update']")private WebElement updatebutton;
-	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/news/delete?del=7818&page_ad=1']")private WebElement deleteicon;
-	
+		
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']") private WebElement alertbox;
 	@FindBy(xpath = "//td[text()='oopppphhh']") private WebElement text;
 	
@@ -68,24 +64,7 @@ public WebDriver driver;
 		 resetbutton.click();
 		 return this;
 	 }
-	 public ManageNewsPage clickOnEditIcon() {
-		 editicon.click();
-		 return this;
-	 }
 	 
-	 public ManageNewsPage editTheNewsTitle(String textfield2) {
-		 editnewstextfield.sendKeys(textfield2);
-		 return this;
-		 
-	 }
-	 public ManageNewsPage clickOnUpdateButton() {
-		 updatebutton.click();
-		 return this;
-	 }
-	public  ManageNewsPage clickOnDeleteIcon() {
-		deleteicon.click();
-		return this;
-	}
 	
 	/* public String getTitleText() {
     	 return enternewstitle.getText();

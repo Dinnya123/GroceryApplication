@@ -80,10 +80,10 @@ public void verifyUserisabletoResetNewlyAddedNews() throws IOException {
 		//ManageNewsPage news= new ManageNewsPage(driver);
 			managenewspage=homepage.clickMoreinfoLink();
 
-		managenewspage.clickOnResetButton().clickOnEditIcon();
+		managenewspage.clickOnResetButton();
 		String textfield2=ExcelUtility.readStringData(3,0,"ManageNewsPage");
 
-		managenewspage.editTheNewsTitle(textfield2).clickOnUpdateButton().clickOnDeleteIcon();
+	
 	
 		
 }

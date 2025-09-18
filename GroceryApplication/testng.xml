@@ -15,6 +15,7 @@
      <methods><include name="verifyUserLoginWithInvalidCredentials"></include></methods>
      </class>
      
+     
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
